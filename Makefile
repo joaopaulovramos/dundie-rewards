@@ -3,7 +3,7 @@
 
 install:
 		@echo "Installing for dev environment"
-		@.\.venv\Scripts\python -m pip install -e '.[dev]'
+		@.\.venv\Scripts\python -m pip install -e '.[test]'
 
 virtualenv:
 		@.\.venv\Scripts\python -m pip -m venv .venv
