@@ -1,4 +1,5 @@
 # Projeto Dundie Rewards
+[![CI](https://github.com/joaopaulovramos/dundie-rewards/actions/workflows/main.yml/badge.svg)](https://github.com/joaopaulovramos/dundie-rewards/actions/workflows/main.yml)
 
 Nós fomos contratados pela Dunder Mifflin, grande fabricante de papéis para desenvolver um sistema de recompensas para seus colaboradores
 
