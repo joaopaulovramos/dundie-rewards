@@ -4,4 +4,4 @@ addopts = "-ra -q -vv -s"
 testpaths = [
   "tests",
   "integration"
-]
+    ]
