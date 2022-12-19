@@ -1,4 +1,4 @@
-.PHONY: install virtualenv ipython
+.PHONY: install virtualenv ipython pflake8
 
 
 install:
@@ -11,6 +11,9 @@ virtualenv:
 
 ipython:
 		@.\.venv\Scripts\ipython
+
+lint:
+		@.venv\bin\pflake8.exe
 
 test:
 		@.\.venv\Scripts\pytest.exe
