@@ -3,7 +3,7 @@ import logging
 from logging import handlers
 
 
-#BOILERPLATE
+# BOILERPLATE
 LOG_LEVEL = os.getenv('LOG_LEVEL', 'WARNING').upper()
 # TODO: Mover para modulo utilidades
 log = logging.getLogger("dundie")
@@ -15,9 +15,9 @@ fmt = logging.Formatter(
 
 def get_logger(logfile='dundie.log'):
     """Returns a configured a logger"""
-    
-    #ch = logging.StreamHandler() #Console/terminal/stderr
-    #ch.setLevel(LOG_LEVEL)
+
+    # ch = logging.StreamHandler() #Console/terminal/stderr
+    # ch.setLevel(LOG_LEVEL)
     fh = handlers.RotatingFileHandler(
       logfile,
       maxBytes=300,
@@ -26,9 +26,8 @@ def get_logger(logfile='dundie.log'):
 
     fh.setLevel(LOG_LEVEL)
 
-
-    #ch.setFormatter(fmt)
+    # ch.setFormatter(fmt)
     fh.setFormatter(fmt)
 
-    #log.addHandler(fmt)
+    # log.addHandler(fmt)
     log.addHandler(fmt)
