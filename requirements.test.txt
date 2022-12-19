@@ -1,2 +1,4 @@
 pytest
 pytest-watch
+flake8
+pyproject-flake8
