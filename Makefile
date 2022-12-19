@@ -15,6 +15,10 @@ ipython:
 test:
 		@.\.venv\Scripts\pytest.exe
 
+
+testci:
+		@.venv/bin/pytest -v --junitxml=test-result.xml 
+
 watch:
 		@.\.venv\Scripts\ptw.exe
 
