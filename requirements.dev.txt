@@ -3,3 +3,4 @@ ipdb
 pudb
 flake8
 pyproject-flake8
+black
