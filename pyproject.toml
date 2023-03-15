@@ -8,3 +8,4 @@ testpaths = [
 
 [tool.flake8]
 exclude = [".venv", "build"]
+max-length = 79
