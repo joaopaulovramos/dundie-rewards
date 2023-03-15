@@ -1,7 +1,6 @@
-import os
 import logging
+import os
 from logging import handlers
-
 
 # BOILERPLATE
 LOG_LEVEL = os.getenv("LOG_LEVEL", "WARNING").upper()

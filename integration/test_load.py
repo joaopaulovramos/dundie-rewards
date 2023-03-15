@@ -1,5 +1,7 @@
+from subprocess import CalledProcessError, check_output
+
 import pytest
-from subprocess import check_output, CalledProcessError
+
 from tests.constants import PEOPLE_FILE
 
 
