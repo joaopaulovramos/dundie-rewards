@@ -1,2 +1,2 @@
 
-from .log import get_logger
+from .log import get_logger # noqa
