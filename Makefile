@@ -18,8 +18,13 @@ lint:
 test:
 		@.venv/bin/pytest
 
+testci:
+		@pytest -v --junitxml=test-result.xml
+
 watch:
 		@.venv/bin/ptw
+
+
 
 clean:            ## Clean unused files.
 		@find ./ -name '*.pyc' -exec rm -f {} \;
