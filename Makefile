@@ -1,28 +1,25 @@
-.PHONY: install virtualenv ipython pflake8
+.PHONY: install virtualenv ipython clean test testci pflake8
 
 
 install:
 		@echo "Installing for dev environment"
-		@.\.venv\Scripts\python -m pip install -r requirements.test.txt
+		@.venv/bin/python -m pip install -e '.[dev]'
 
 virtualenv:
-		@.\.venv\Scripts\python -m pip -m venv .venv
+		@.venv/bin/python -m pip -m venv .venv
 
 
 ipython:
-		@.\.venv\Scripts\ipython
+		@.venv/bin/ipython
 
 lint:
-		@.venv\bin\pflake8.exe
+		@.venv/bin/pflake8
 
 test:
-		@.\.venv\Scripts\pytest.exe
+		@.venv/bin/pytest
 
-
-testci:
-    @pytest -v --junitxml=test-result.xml 
 watch:
-		@.\.venv\Scripts\ptw.exe
+		@.venv/bin/ptw
 
 clean:            ## Clean unused files.
 		@find ./ -name '*.pyc' -exec rm -f {} \;
