@@ -6,6 +6,4 @@ from tests.constants import PEOPLE_FILE
 @pytest.mark.unit
 @pytest.mark.high
 def test_load():
-    assert len(load(
-      PEOPLE_FILE
-      )) == 3
+    assert len(load(PEOPLE_FILE)) == 3

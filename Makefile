@@ -24,7 +24,8 @@ testci:
 watch:
 		@.venv/bin/ptw
 
-
+fmt:
+	@.venv/bin/black dundie tests integration
 
 clean:            ## Clean unused files.
 		@find ./ -name '*.pyc' -exec rm -f {} \;
