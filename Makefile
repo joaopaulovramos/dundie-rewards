@@ -16,13 +16,14 @@ lint:
 		@.venv/bin/pflake8
 
 test:
-		@.venv/bin/pytest
+		@.venv/bin/pytest --forked
 
 testci:
 		@pytest -v --junitxml=test-result.xml
 
 watch:
-		@.venv/bin/ptw
+		# @.venv/bin/ptw
+		@ls **/*.py | entr pytest --forked
 
 fmt:
 	@.venv/bin/isort dundie tests integration

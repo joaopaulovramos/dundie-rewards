@@ -15,9 +15,9 @@ def test_load():
     result = load(PEOPLE_FILE)
     assert len(result) == 3
 
-    for line in result:
-        data = line.split(",")
-        assert data[0] in EXPECTED_NAMES
-        assert data[1] in EXPECTED_DEPTS
-        assert data[2] in EXPECTED_ROLES
-        assert EMAIL_DOMAIN in data[3]
+
+@pytest.mark.unit
+@pytest.mark.high
+def test_load_positive_first_name_starts_with_j(request):
+    """Test function load function."""
+    assert load(PEOPLE_FILE)[0]["name"] == "Jim Halpert"
