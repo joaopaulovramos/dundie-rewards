@@ -40,3 +40,25 @@ def test_add_person_the_first_time():
 def test_negative_add_person_invalid_email():
     with pytest.raises(ValueError):
         add_person({}, ".@bla", {})
+
+
+@pytest.mark.unit
+def test_add_or_remove_points_for_person():
+    pk = "joe@doe.com"
+    data = {"name": "Joe Doe", "role": "Salesman", "dept": "Sale"}
+    db = connect()
+    _, created = add_person(db, pk, data)
+    assert created == True
+    commit(db)
+
+    db = connect()
+    before = db["balance"][pk]
+    add_movement(db, pk, -100, "manager")
+    commit(db)
+
+    db = connect()
+    after = db["balance"][pk]
+
+    assert after == before - 100
+    assert after == 400
+    assert before == 500
