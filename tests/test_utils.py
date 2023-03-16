@@ -23,7 +23,6 @@ def test_generate_simple_password():
     """Test generation of random simple passwords
     TODO: Generate hashed complex passwords, encrypt it
     """
-    passwords = []
-    for _ in range(100):
-        passwords.append(generate_simple_password(8))
+
+    passwords = [generate_simple_password(8) for _ in range(100)]
     assert len(set(passwords)) == 100
