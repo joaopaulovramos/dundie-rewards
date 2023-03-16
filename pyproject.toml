@@ -13,17 +13,7 @@ max-length = 79
 [tool.black]
 line-length = 79
 target-version = ["py38", "py39"]
-exclude = '''
-/(
-    \.eggs
-  | \.git
-  | \.venv
-  | _build
-  | build
-  | dist
-  | migrations
-)/
-'''
+exclude = '''/(\.eggs| \.git| \.venv| _build| build| dist| migrations)/'''
 
 [tool.isort]
 profile = "black"
